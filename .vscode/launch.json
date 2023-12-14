@@ -1,0 +1,47 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'resizer'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=resizer",
+                    "--package=resizer"
+                ],
+                "filter": {
+                    "name": "resizer",
+                    "kind": "bin"
+                }
+            },
+            "args": ["\\\\3D_EX88\\Ex_3DWork\\DBridge\\H_3TF_SoftModeling\\document\\in\\photo\\3TF_KJ_SOFTMODELING_23_11_16_参考画像\\seat_photo\\SecondSeat\\second",
+                    "*.*","1000"
+                    ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'resizer'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=resizer",
+                    "--package=resizer"
+                ],
+                "filter": {
+                    "name": "resizer",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

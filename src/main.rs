@@ -17,7 +17,7 @@ fn get_filename_list(dir_path:&String,wild_card:&String)->Vec<String>
     for entry 
         in glob(format!("{}/{}",&dir_path ,&wild_card).as_str()).unwrap() {
         let path = entry.as_ref().unwrap();
-        if img_extensions.contains(&path.extension().unwrap().to_str().unwrap())
+        if img_extensions.contains(&path.extension().unwrap().to_str().unwrap().to_lowercase().as_str())
         {
             path_lst.push(entry.unwrap().to_string_lossy().to_string());
         }
